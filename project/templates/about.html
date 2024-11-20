@@ -1,0 +1,52 @@
+
+{% extends "base.html" %}
+{% block title %} About {% endblock title %} 
+{% block body %}
+{% load static %}
+<section id="about" class="about section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>About</h2>
+      <p>I am a proactive Computer Science student at KIET, poised to graduate in 2025 with a robust foundation in programming languages. My academic journey is marked by a strong CGPA and high school percentages reflecting my dedication and passion for technology.</p>
+    </div><!-- End Section Title -->
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4 justify-content-center">
+        <div class="col-lg-4">
+          <img src="{% static "assets/img/rohit12.png" %}" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-8 content">
+          <h2> Web Developer</h2>
+          <p class="fst-italic py-3">
+            
+          </p>
+          <div class="row">
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>4 June 2003</span></li> 
+                <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>997703065</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Ghaziabad</span></li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>21</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>B.Tech</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>rohit040603@gmail.com</span></li>
+                
+              </ul>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+
+    </div>
+
+  </section><!-- /About Section -->
+
+
+{% endblock body %}
+

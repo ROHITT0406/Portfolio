@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %} Blog{% endblock title %}
+{% block body %}
+
+
+<!-- Blog Posts Section -->
+<section id="blog-posts" class="blog-posts section">
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Welcome To My blog</h2>
+    </div>
+    
+    <div class="container">
+        <div class="">
+            {% for post in posts %}
+            <div class="" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon flex-shrink-0"><i class=""></i></div>
+                <div class=" text-center col-lg-4" data-aos="fade-right">
+                    <img src="{{ post.img.url }}" class="img-fluid" alt="">
+                </div>
+                <br>
+    
+                <div>
+                    <h4 class="title"><a href="" class="stretched-link">{{ post.title }}</a></h4>
+                    <p class="description">{{ post.description }}</p>
+                    <h6>Posted By: {{ post.authorname }}</h6>
+                    <h6>Posted on: {{ post.timestamp }}</h6>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock body %}

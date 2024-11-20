@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %} Internship {% endblock title %}
+{% block body %}
+
+<div class="card p-2 "style="background-color: lightgreen;">
+    <div class="row">
+        <div class="col md-4"></div>
+        <div class="col md-4">
+            <br>
+            
+            
+            <h3 class=" text-white bg-dark text-center p-3">Fill Out The Form Carefully</h3>
+            {% for message in messages  %}
+            <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+                <strong>{{message}}</strong> 
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            {% endfor %}
+            <form action="internship" method="post">
+                {% csrf_token %}
+                <div class="mb-3 ">
+                    <label for="exampleFormControlInput1" class="form-label "><b> Full Name</b></label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="name"
+                        placeholder="Enter your name" required>
+                </div>
+                <div class="mb-3 ">
+                    <label for="exampleFormControlInput1" class="form-label "><b> Universty Serial Number</b></label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="usn"
+                        placeholder="University Serial No" required>
+                </div>
+                <div class="mb-3 ">
+                    <label for="exampleFormControlInput1" class="form-label "><b> Email Address</b></label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" name="email"
+                        placeholder="name@example.com" required>
+                </div>
+                
+                <div class="mb-3 ">
+                    <label for="exampleFormControlInput1" class="form-label "><b> Did You Received Offer Letter ?</b></label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="offerletter"
+                        placeholder="YES or NO" required>
+                </div>
+                <div class="mb-3 ">
+                    <label for="exampleFormControlInput1" class="form-label "><b> Start Date</b></label>
+                    <input type="date" class="form-control" id="exampleFormControlInput1" name="sdate"
+                        required>
+                </div>
+                <div class="mb-3 ">
+                    <label for="exampleFormControlInput1" class="form-label "><b>End Date</b></label>
+                    <input type="date" class="form-control" id="exampleFormControlInput1" name="edate"
+                         required>
+                </div>
+                <div class="mb-3">
+                    <span><i class= ""></i><b> Projects</b></span>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" name="project" rows="3" required></textarea>
+                </div>
+                
+                <div class="mb-3">
+                    <span><i class= ""></i><b> College Name </b></span>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" name="cname" rows="3" required></textarea>
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-success" type="submit">SUBMIT</button>
+
+                </div>
+            </form>
+        </div>
+        <div class="col md-4"></div>
+    </div>
+</div>
+
+{% endblock body %}
